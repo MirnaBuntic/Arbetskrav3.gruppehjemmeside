@@ -1,7 +1,7 @@
 export default {
     name: 'member',
     title: 'Member',
-    type: 'document',
+    type: 'array',
     fields: [
         {
             name: 'name',
