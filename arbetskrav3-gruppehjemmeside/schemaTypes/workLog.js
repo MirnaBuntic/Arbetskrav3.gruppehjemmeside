@@ -1,7 +1,7 @@
 export default {
     name: 'workLog',
     title: 'Work log',
-    type: 'array',
+    type: 'document',
     fields: [
         {
             name: 'title',
