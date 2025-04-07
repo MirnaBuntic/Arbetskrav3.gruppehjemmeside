@@ -32,11 +32,5 @@ export default {
             title: 'Biography',
             type: 'text',
         },
-        {
-            name: 'personalLog',
-            title: 'Personal Log',
-            type: 'array',
-            of: [{ type: 'reference', to: [{ type: 'workLog'}] }],
-        },
     ],
 };
