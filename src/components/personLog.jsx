@@ -1,6 +1,7 @@
+
 import React from "react";
 
-const personLog = ({ member }) => {
+const PersonLog = ({ member }) => {
 
     return (
         <div>
@@ -19,4 +20,4 @@ const personLog = ({ member }) => {
     );
 };
 
-export default personLog;
+export default PersonLog;
