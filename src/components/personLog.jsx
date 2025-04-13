@@ -1,17 +1,17 @@
 
 import React from "react";
 
-const PersonLog = ({ member }) => {
+const PersonLog = ({ logs }) => {
 
     return (
         <div>
-            <h2>Arbeidslogg</h2>
+            <h2>Work Log</h2>
             <ul>
-                {member.logs?.map((log, i) => (
+                {logs?.map((log, i) => (
                 <li key={i}>
                     <h3>{log.title}</h3>
-                    <p>{newDate(log.date).toLocaleDateString()}</p>
-                    <p>{log.content}</p>
+                    <p>{new Date(log.date).toLocaleDateString()}</p>
+                    <p>{log.description}</p>
                 </li>
             ))}
 

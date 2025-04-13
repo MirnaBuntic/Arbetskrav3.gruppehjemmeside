@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       <nav className="header__nav">
-        <Link to="/">Hjem</Link>
+        <Link to="/">Home</Link>
 
         {medlemmer.length > 0 && <div className="nav-divider" />}
 
