@@ -29,14 +29,14 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__title">
-        {gruppenavn} {gruppenummer && `– ${gruppenummer}`}
-      </div>
+
+        <p>{gruppenavn} {gruppenummer && `– ${gruppenummer}`}</p>
+      
 
       <nav className="header__nav">
         <Link to="/">Home</Link>
 
-        {medlemmer.length > 0 && <div className="nav-divider" />}
+        {medlemmer.length > 0 }
 
         {medlemmer.map((member) => {
             const key = member.slug || member._id || `${member.name}-${Math.random()}`;
@@ -46,10 +46,6 @@ const Header = () => {
                 </Link>
             );
             })}
-
-
-
-
       </nav>
     </header>
   );

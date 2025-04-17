@@ -1,0 +1,58 @@
+.grouplogg_header{
+    
+    h2{
+        color:#000;
+        text-align: center;
+    }
+}
+
+.articlelogg {
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.memberlogg {
+    border: 2px solid #000;
+    margin: 20px 5px;
+    text-align: center;
+    max-width: 400px;
+    min-width: 400px;
+
+    p{
+        color:#000;
+    }
+}
+
+@media (min-width: 800px) {
+    
+    .articlelogg{
+
+        ul{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .membersection{
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h2{
+            width: 100%;
+            font-size: 50px;
+        }
+    }
+
+    .memberarticle {
+        max-width: 400px;
+        min-width: 400px;
+        flex-direction: row;
+    }
+}

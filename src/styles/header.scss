@@ -1,0 +1,47 @@
+ #root {
+    background-color: #e7cabc;
+ }
+
+.header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+
+    h2{
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    p{
+        margin: 20px 50px;
+        color: #000;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+}
+
+.header__nav {
+    display: flex;
+    margin: auto;
+    color: #000;
+
+    a{
+        margin: 5px 10px 0 10px;
+        text-transform: uppercase;
+        color: #000000;
+
+        
+    }
+
+
+}
+
+@media (min-width: 800px) {
+
+    .header {
+        flex-direction: row;
+    }
+}

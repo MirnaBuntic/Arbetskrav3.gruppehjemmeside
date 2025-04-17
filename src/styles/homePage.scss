@@ -1,0 +1,30 @@
+.membersection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h2{
+        text-align: center;
+        margin-top: 50px;
+        color: #000;
+    }
+}
+
+.memberarticle {
+
+    margin: 50px;
+
+    img{
+        width: 100%;
+    }
+
+    h3 {
+        color: #000;
+        margin: 0;
+    }
+
+    p{
+        color:#000;
+        margin: 0;
+    }
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import sanityClient from "../sanityClient";
+import '../styles/groupLog.scss';
 
 const GroupLog = () => {
     const [logs, setLogs] = useState([]);
@@ -31,10 +32,10 @@ const GroupLog = () => {
     }
 
     return (
-        <section>
+        <article className="articlelogg">
             <ul>
                 {logs.map((log, index) => (
-                    <li key={index}>
+                    <li className="memberlogg" key={index}>
                         <p>{new Date(log._createdAt).toLocaleDateString()}</p>
                         <p>{log.authorName}</p>
                         <div>
@@ -45,7 +46,7 @@ const GroupLog = () => {
                     </li>
                 ))}
             </ul>
-        </section>
+        </article>
     );
 };
 
