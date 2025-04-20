@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import sanityClient from "../sanityClient";
+import '../styles/personalPage.scss';
+
+
 
 
 const PersonalPage = () => {
@@ -46,12 +49,16 @@ const PersonalPage = () => {
 
     return (
     
-        <section>
+        <section className="Biografi">
             <img src={member.imageUrl}></img>
+            <div className="Designcontainer">
+
+           
             <h2>{member.name}</h2>
             <p>{member.email}</p>
+            </div>
 
-            <section>
+            <section className="About">
                 <h3>Biography</h3>
                 <p>{member.bio}</p>
 
@@ -63,7 +70,7 @@ const PersonalPage = () => {
                 </ul>
 
                 <h3>Log</h3>
-                <ul>
+                <ul className="Memberlog2">
                     {member.logs.map((log, i) => (
                         <li key={i}>
                             {log.title} {log.description}

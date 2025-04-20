@@ -27,7 +27,7 @@ const HomePage = () => {
                 <h2>Group members</h2>
                 {members.map((member) => (
                 <Link key={member._id} to={`/profile/${member.slug}`}>
-                    <article className="memberarticle" key={member.slug}> {/*ikke bruk slug her, bruk _id som blir opprettet i sanity. Ta det med i fetchen over*/}
+                    <article className="memberarticle" key={member.slug}> 
                         <img src={member.imageUrl} alt={member.name} />
                         <h3>{member.name}</h3>
                         <p>{member.email}</p>
