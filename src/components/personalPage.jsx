@@ -16,8 +16,8 @@ const PersonalPage = () => {
             `*[_type == "member" && slug.current == $slug][0]{
             name, 
             email,
-            biography,
-            interest,
+            bio,
+            interests,
             "imageUrl": image.asset->url,
             "logs": *[_type == "workLog" && author._ref == ^._id] | order(_createdAt desc){
                 title,
@@ -53,11 +53,11 @@ const PersonalPage = () => {
 
             <section>
                 <h3>Biography</h3>
-                <p>{member.biography}</p>
+                <p>{member.bio}</p>
 
                 <h3>Interests</h3>
                 <ul>
-                    {member.interest?.map((interest, i) => (
+                    {member.interests?.map((interest, i) => (
                         <li key={i}>{interest}</li>
                     ))}
                 </ul>
