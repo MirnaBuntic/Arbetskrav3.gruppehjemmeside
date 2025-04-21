@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import sanityClient from "../sanityClient";
-import GroupLog from "./groupLog";
+import GroupLog from "./GroupLog";
 import { Link } from "react-router-dom";
 import '../styles/homePage.scss';
 
