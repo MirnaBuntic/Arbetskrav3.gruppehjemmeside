@@ -13,7 +13,7 @@ const PersonalPage = () => {
     
     useEffect(() => {
 
-        console.log("Slug from URL:", slug);
+        console.log("riktig slug", slug);
 
         sanityClient.fetch(
             `*[_type == "member" && slug.current == $slug][0]{
@@ -33,19 +33,22 @@ const PersonalPage = () => {
         )
             
             .then ((data) => {
-                console.log("fetched member:", data);
+                console.log("fetch fungerer:", data);
                 setMember(data);
 
             })
 
-            .catch((error) => console.error ("sanity error:", error));
-        }, [slug]);
+        }, [slug]); //(useeffect kjøres kun når slug endres)
 
 
-    if (!member) {
+    if (!member) { //Fikk hjelp av chatGPT til å forstå hvorfor ikke koden fungerte etter jeg skrev alt over. Limte inn koden og fikk dette 
+        //som en av alternativene til debugging
         return <p>Loading...</p>
     }
 
+    //fikk lenge opp kun loading. Etterhvert så jeg at jeg hadde lagt feil navn på noen av nøkkelverdiene. Gikk derfor inn i sanity schematypes
+    //og så at biography hadde bio som name og ikke biography. Endret litt på småfeil nedover og fikk deretter opp alt innhold
+    //på personalpage. 
 
     return (
     
