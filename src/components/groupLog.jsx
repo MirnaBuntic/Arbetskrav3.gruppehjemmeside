@@ -6,6 +6,7 @@ const GroupLog = () => {
     const [logs, setLogs] = useState([]);
 
     useEffect(() => {
+        //Hämtar alla "worklog" från sanity sorterade efter vilket datum den publicerades.
         sanityClient.fetch(`
             *[_type == "workLog"] | order(_createdAt desc){
             title,
@@ -32,6 +33,7 @@ const GroupLog = () => {
     }
 
     return (
+        //Retunerar jsx som skapar HTML som ska visa innehåll från varje logg
         <article className="articlelogg">
             <ul>
                 {logs.map((log, index) => (

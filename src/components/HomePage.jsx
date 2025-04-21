@@ -8,6 +8,7 @@ const HomePage = () => {
     const [members, setMembers] = useState([]);
 
     useEffect(() => {
+        //Hämtar "members" från sanity
         sanityClient.fetch(`
           *[_type == "group"][0] {
             members[]->{
@@ -22,6 +23,7 @@ const HomePage = () => {
     }, []);
 
     return (
+        //Retunerar jsx och skapar html för hur homepage ska vara uppbyggd
         <>
             <section className="membersection">
                 <h2>Group members</h2>
