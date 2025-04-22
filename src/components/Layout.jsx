@@ -6,6 +6,7 @@ const Layout = () => {
     <>
       <Header />
       <main>
+        {/*https://api.reactrouter.com/v7/functions/react_router.Outlet.html*/}
         <Outlet />
       </main>
     </>

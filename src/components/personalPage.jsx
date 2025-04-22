@@ -55,10 +55,8 @@ const PersonalPage = () => {
         <section className="Biografi">
             <img src={member.imageUrl}></img>
             <div className="Designcontainer">
-
-           
-            <h2>{member.name}</h2>
-            <p>{member.email}</p>
+                <h2>{member.name}</h2>
+                <p>{member.email}</p>
             </div>
 
             <section className="About">
